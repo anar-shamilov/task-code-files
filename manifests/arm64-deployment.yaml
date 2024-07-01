@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arm64-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arm64-app
+  template:
+    metadata:
+      labels:
+        app: arm64-app
+    spec:
+      nodeSelector:
+        kubernetes.io/arch: arm64
+      terminationGracePeriodSeconds: 0
+      containers:
+        - name: arm64-app
+          image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
+          # resources:
+          #   requests:
+          #     cpu: 1

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: amd64-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: amd64-app
+  template:
+    metadata:
+      labels:
+        app: amd64-app
+    spec:
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      terminationGracePeriodSeconds: 0
+      containers:
+        - name: amd64-app
+          image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
+          resources:
+            requests:
+              cpu: 1
