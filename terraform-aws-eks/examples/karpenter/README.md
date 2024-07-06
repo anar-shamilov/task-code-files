@@ -1,7 +1,5 @@
 # Karpenter Example
 
-<<<<<<< HEAD
-=======
 Note: To change VPC with the existing one and with the existing subnets, just change the following variable values from `terraform-aws-eks/examples/karpenter/main.tf` file and 'module eks'
 
 ```bash
@@ -9,8 +7,6 @@ Note: To change VPC with the existing one and with the existing subnets, just ch
   subnet_ids               = module.vpc.private_subnets
   control_plane_subnet_ids = module.vpc.intra_subnets
 ```
-
->>>>>>> 452c8584f4ac17539cc68c7c975a8b7ceb469a58
 
 ## Usage
 
