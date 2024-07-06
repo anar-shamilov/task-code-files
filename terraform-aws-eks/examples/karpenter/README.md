@@ -109,7 +109,7 @@ ip-10-0-46-213.eu-west-1.compute.internal   Ready    <none>   100m   v1.30.0-eks
 2. Remove the resources created by Terraform
 
 ```bash
-cd cd ../terraform-aws-eks/examples/karpenter
+cd ../terraform-aws-eks/examples/karpenter
 terraform destroy --auto-approve
 ```
 
