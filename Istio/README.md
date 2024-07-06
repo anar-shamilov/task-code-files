@@ -15,6 +15,9 @@ $ istioctl analyze -n istio-system
 ```
 
 #### We can install addons https://github.com/istio/istio/tree/master/samples/addons
+```bash
+$ kubectl apply -f istio/samples/addons/
+```
 
 #### Create namespaces and label them for the `envoy` sidecar to be installed then, deploy sample applications
 
@@ -60,7 +63,6 @@ $ for 1 in `seq 1000`; do kubectl exec -it $mcss_ratings_pod -n mcss -- curl pro
 #### To check encryption we can install Kiali and look at the web UI with the encryption Icon too
 
 ```bash
-$ kubectl apply -f istio/samples/addons/
 $ kubectl port-forward svc/kiali -n istio-system 20001:20001
 ```
 
