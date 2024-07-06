@@ -6,7 +6,7 @@ $ helm repo update
 $ helm install aws-ebs-csi-driver aws-ebs-csi-driver/aws-ebs-csi-driver --namespace kube-system
 ```
 
-### Create default storage class
+### Create storage class and set it as default
 ```bash
 $ kubectl apply -f - <<EOF
 apiVersion: storage.k8s.io/v1
