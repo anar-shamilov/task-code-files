@@ -5,7 +5,7 @@ $ helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
 $ helm install metrics-server metrics-server/metrics-server -n kube-system
 ```
 
-#### Install Istio with helm (To install with the `istioctl`: https://istio.io/latest/docs/setup/install/istioctl/) (Mniminum helm version: 3.8.2)
+#### Install Istio with helm (To install `istioctl` use https://istio.io/latest/docs/setup/install/istioctl/) (Mniminum helm version: 3.8.2)
 ```bash
 $ helm repo add istio https://istio-release.storage.googleapis.com/charts
 $ helm repo update
